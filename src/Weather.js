@@ -9,20 +9,25 @@ export default function Weather() {
     imgUrl:
       "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png",
   };
+
+  let form = (
+    <form //onSubmit={handleSubmit}
+    >
+      <input
+        type="search"
+        placeholder="Enter a city"
+        //    onChange={updateCity}
+      ></input>
+      <button type="submit">Search</button>
+    </form>
+  );
   return (
     <div className="Weather">
       <div className="container">
         <div className="card">
           <div className="row">
             <div className="col-10">
-              <form>
-                <input
-                  className="form-control location-input"
-                  type="search"
-                  autocomplete="off"
-                  placeholder="Where would you like to check the forecast for?"
-                />
-              </form>
+              <form>{form} </form>
             </div>
             <div className="col-2">
               <button>Current location</button>
@@ -58,7 +63,7 @@ export default function Weather() {
       </div>
       <div className="sign-off">
         <a
-          href="https://github.com/LibbyMills/SheCodesPlus-WeatherApp"
+          href="https://github.com/LibbyMills/weather-react"
           target="_blank"
           rel="noreferrer"
         >
