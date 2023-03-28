@@ -7,6 +7,16 @@ function App() {
       <div className="container">
         <Weather />
       </div>
+      <div className="sign-off">
+        <a
+          href="https://github.com/LibbyMills/weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open source code
+        </a>
+        , by Libby Mills
+      </div>
     </div>
   );
 }

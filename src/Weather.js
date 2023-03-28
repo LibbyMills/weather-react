@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 import "./Weather.css";
 
@@ -31,48 +31,7 @@ export default function Weather() {
               <button>Current location</button>
             </div>
           </div>
-
-          <h1>Today</h1>
-
-          <small className="dtg">
-            <FormattedDate date={weatherData.date} />
-          </small>
-          <div className="row">
-            <div className="col-1 text-center">
-              <img
-                src={weatherData.iconURL}
-                className={weatherData.description}
-                alt="Current weather icon"
-              />
-            </div>
-            <div className="col-2 text-center">
-              <span className="today-temp">
-                {Math.round(weatherData.temperature)}
-              </span>
-            </div>
-            <div className="col-1 text-center">
-              <span className="units">°C</span>
-            </div>
-            <div className="col-1 text-center">
-              <div className="vertical"></div>
-            </div>
-            <div className="col-7">
-              <span className="response">
-                In {weatherData.city} today...{weatherData.description}
-              </span>
-            </div>
-          </div>
-          <div></div>
-        </div>
-        <div className="sign-off">
-          <a
-            href="https://github.com/LibbyMills/weather-react"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open source code
-          </a>
-          , by Libby Mills
+          <WeatherInfo data={weatherData} />
         </div>
       </div>
     );
