@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+
 import "./Weather.css";
 
 export default function Weather() {
@@ -7,10 +9,10 @@ export default function Weather() {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      date: new Date(response.data.time * 1000),
       city: response.data.city,
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
-      date: `Mon 16:44`,
       iconURL: `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png`,
     });
   }
@@ -32,7 +34,9 @@ export default function Weather() {
 
           <h1>Today</h1>
 
-          <small className="dtg">{weatherData.date}</small>
+          <small className="dtg">
+            <FormattedDate date={weatherData.date} />
+          </small>
           <div className="row">
             <div className="col-1 text-center">
               <img
