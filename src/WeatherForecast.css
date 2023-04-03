@@ -1,0 +1,15 @@
+.forecast-temp {
+  font-size: 16px;
+  position: relative;
+  top: 25px;
+  right: 35px;
+}
+
+.day {
+  font-weight: bolder;
+}
+
+.wx-icon {
+  position: relative;
+  right: 15px;
+}
