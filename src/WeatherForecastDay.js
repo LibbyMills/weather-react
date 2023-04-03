@@ -17,26 +17,24 @@ export default function WeatherForecastDay(props) {
   }
   return (
     <div className="WeatherForecastDay">
-      <div className="col-3">
-        <div className="day">{formatDay(props.data.time)}</div>
-        <div className="row text-center">
-          <div className="col-4">
-            <div className="wx-icon">
-              <img
-                src={props.data.condition.icon_url}
-                className={props.data.condition.description}
-                alt={props.data.condition.description}
-              />
-            </div>
+      <div className="day">{formatDay(props.data.time)}</div>
+      <div className="row text-center">
+        <div className="col-4">
+          <div className="wx-icon">
+            <img
+              src={props.data.condition.icon_url}
+              className={props.data.condition.description}
+              alt={props.data.condition.description}
+            />
           </div>
-          <div className="col-8">
-            <ul className="forecast-temp">
-              <li>
-                <b>{maxTemp()}°</b>
-              </li>
-              <li>{minTemp()}°</li>
-            </ul>
-          </div>
+        </div>
+        <div className="col-8">
+          <ul className="forecast-temp">
+            <li>
+              <b>{maxTemp()}°</b>
+            </li>
+            <li>{minTemp()}°</li>
+          </ul>
         </div>
       </div>
     </div>
