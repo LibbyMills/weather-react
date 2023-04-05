@@ -36,7 +36,7 @@ ul {
 }
 .location-input {
   margin: 5px;
-  width: 65%;
+  width: 80%;
 }
 .button {
   border: 1px solid rgb(91, 173, 254);
@@ -44,6 +44,7 @@ ul {
   background: #f8c421;
   box-shadow: 3px 3px 3px rgb(67, 62, 62);
   margin: 8px;
+  padding: 1px 20px;
 }
 .current-wx-icon {
   font-size: 64px;
